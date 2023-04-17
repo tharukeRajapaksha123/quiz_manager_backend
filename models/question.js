@@ -7,6 +7,7 @@ const questionSchema = new mongoose.Schema({
   answer_3: { type: String },
   answer_4: { type: String },
   correct_answer: { type: Number, required: true },
+  quiz_id : {type:String, required:true}
 });
 
 const Question = mongoose.model('Question', questionSchema);

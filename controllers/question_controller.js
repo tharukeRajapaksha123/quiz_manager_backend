@@ -35,7 +35,7 @@ questionController.get('/:id', async (req, res) => {
 });
 
 questionController.patch('/:id', async (req, res) => {
-  const allowedUpdates = ['question', 'answer_1', 'answer_2', 'answer_3', 'answer_4', 'correct_answer'];
+  const allowedUpdates = ['question', 'answer_1', 'answer_2', 'answer_3', 'answer_4', 'correct_answer',"quiz_id"];
   const updates = Object.keys(req.body);
   const isValidOperation = updates.every((update) => allowedUpdates.includes(update));
   if (!isValidOperation) {
